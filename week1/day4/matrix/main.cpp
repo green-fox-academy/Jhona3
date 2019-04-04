@@ -15,19 +15,19 @@ int main(int argc, char *args[]) {
     //   0 0 0 1
     //
     // - Print this two dimensional array to the output
-    int dyno[4][4];
+    int dyno[8][8];
 
-    for (int i = 0; i < sizeof(dyno) / sizeof(int); i++) {
-        for (int j = 0; j < 4; j++) {
+    for (int i = 0; i < sizeof(dyno) / sizeof(dyno[0]); i++) {
+        for (int j = 0; j < sizeof(dyno) / sizeof(dyno[0]); j++) {
             if (i == j) {
                 dyno[i][j] = 1;
-                std::cout << dyno[i][j];
+                std::cout << dyno[i][j] << " ";
             } else {
                 dyno[i][j] = 0;
-                std::cout << dyno[i][j];
+                std::cout << dyno[i][j] << " ";
             }
 
-        }
+        }std::cout << std::endl;
     }
 
     return 0;

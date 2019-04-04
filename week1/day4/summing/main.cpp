@@ -16,7 +16,7 @@ int main(int argc, char* args[]) {
 int sum(int untill){
     int b=0;
 
-    for(int i = 0; i < untill; i++){
+    for(int i = 0; i <= untill; i++){
 
        b = b + i;
 

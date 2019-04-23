@@ -12,7 +12,7 @@ Sponsor::Sponsor(std::string name, int age, Gender gender, std::string company) 
 Sponsor::Sponsor() {
     _name = ("Jane Doe");
     setAge(30);
-    setGender(Female);
+    setGender(FEMALE);
     _company = "Google";
     _hiredStudents = 0;
 

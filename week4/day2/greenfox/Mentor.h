@@ -7,9 +7,9 @@
 
 #include "Person.h"
 enum Level{
-    Junior,
-    Intermediate,
-    Senior
+    JUNIOR,
+    INTERMEDIATE,
+    SENIOR
 };
 
 class Mentor : public Person {

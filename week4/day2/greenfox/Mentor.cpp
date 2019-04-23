@@ -19,17 +19,17 @@ Mentor::Mentor(std::string name, int age, Gender gender, Level level) : Person(n
 Mentor::Mentor() {
     _name = ("Jane Doe");
     setAge(30);
-    setGender(Female);
-    _level = Intermediate;
+    setGender(FEMALE);
+    _level = INTERMEDIATE;
 }
 
 std::string Mentor::getLevelAsString() {
     switch(_level){
-        case Junior:
-            return "Junior";
-        case Intermediate:
-            return "Intermediate";
-        case Senior:
-            return "Senior";
+        case JUNIOR:
+            return "JUNIOR";
+        case INTERMEDIATE:
+            return "INTERMEDIATE";
+        case SENIOR:
+            return "SENIOR";
     }
 }

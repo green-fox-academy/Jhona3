@@ -33,9 +33,9 @@ Person::Person(std::string name, int age, Gender gender) {
 
 std::string Person::getGenderAsString() {
     switch (_gender) {
-        case Male:
+        case MALE:
             return "male";
-        case Female:
+        case FEMALE:
             return "female";
         case Other:
             return "other";
@@ -45,7 +45,7 @@ std::string Person::getGenderAsString() {
 Person::Person() {
     _name = ("Jane Doe");
     setAge(30);
-    setGender(Female);
+    setGender(FEMALE);
 
 
 }

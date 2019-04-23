@@ -26,7 +26,7 @@ void Student::skipDays(int numberOfDays) {
 Student::Student() {
     _name = ("Jane Doe");
     setAge(30);
-    setGender(Female);
+    setGender(FEMALE);
     _previousOrganization = "The school of life";
     _skippedDays = 0;
 }

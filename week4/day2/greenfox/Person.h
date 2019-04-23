@@ -8,8 +8,8 @@
 #include <iostream>
 
 enum Gender {
-    Male,
-    Female,
+    MALE,
+    FEMALE,
     Other
 };
 

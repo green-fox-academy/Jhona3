@@ -3,4 +3,4 @@ project(greenfox)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(greenfox main.cpp Person.cpp Person.h Student.cpp Student.h Mentor.cpp Mentor.h)
+add_executable(greenfox main.cpp Person.cpp Person.h Student.cpp Student.h Mentor.cpp Mentor.h Sponsor.cpp Sponsor.h)

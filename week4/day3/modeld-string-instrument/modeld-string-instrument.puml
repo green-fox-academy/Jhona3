@@ -1,0 +1,34 @@
+@startuml
+abstract Instrument{
+    {field} #  name
+    {abstract} + play()
+}
+
+abstract StringedInstrument{
+    {field} # numberOfStrings
+    {abstract} +  sound()
+    {method} +  play()
+}
+
+Instrument <|-- StringedInstrument
+
+class ElectricGuitar{
+    {method}ElectricGuitar()
+    {method} ElectricGuitar(int)
+}
+
+class BassGuitar{
+    {method} BassGuitar
+    {method} BassGuitar(int)
+}
+
+class Violin{
+    {method} Violin
+    {method} Violin(int)
+}
+StringedInstrument <|-- ElectricGuitar
+StringedInstrument <|-- BassGuitar
+StringedInstrument <|-- Violin
+
+
+@enduml

@@ -13,6 +13,8 @@ int main()
 
     printf("%s", string);
 
+    free(string);
+
     return 0;
 }
 

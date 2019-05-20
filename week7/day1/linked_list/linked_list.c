@@ -99,3 +99,14 @@ void delete_first(linked_list_t *head)
     head->next = second_loc;
 
 }
+
+void delete_by_value(linked_list_t *head, int data)
+{
+    while(head->next->data != data){
+        head = head->next;
+    }
+    linked_list_t *next_loc = head->next->next;
+    free(head->next);
+    head->next = next_loc;
+
+}

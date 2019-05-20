@@ -31,5 +31,5 @@ int is_empty(linked_list_t *head);
 
 void delete_first(linked_list_t *head);
 
-
+void delete_by_value(linked_list_t *head, int data);
 #endif //LINKED_LIST_LINKED_LIST_H

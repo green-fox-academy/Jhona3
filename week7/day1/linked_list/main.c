@@ -16,6 +16,7 @@ int main()
     push_front(head,30);
     insert_after(head, 40000000, 4);
     delete_first(head);
+    delete_by_value(head, 60);
 
     printf("%d\n", size(head));
     printf("%d\n", is_empty(head));

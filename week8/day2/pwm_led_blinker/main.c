@@ -31,7 +31,7 @@ void init_timer()
 
     timer_handle.Instance = TIM2;
     timer_handle.Init.Prescaler = 108 - 1; // 108000000/108=1000000 -> speed of 1 count-up: 1/1000000 s = 0.001 ms
-    timer_handle.Init.Period = 100 - 1; // 100 x 0.001 ms = 10 ms = 0.01 s period
+    timer_handle.Init.Period = 200 - 1; // 100 x 0.001 ms = 10 ms = 0.01 s period
     timer_handle.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
     timer_handle.Init.CounterMode = TIM_COUNTERMODE_UP;
 
@@ -68,20 +68,28 @@ int main(void)
 
     while (1) {
         // We can set the compare value (the pulse width of the signal) like this:
-         __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, 25);
-        HAL_Delay(500);
-         __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, 50);
-        HAL_Delay(500);
-        __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, 75);
-        HAL_Delay(500);
-        __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, 100);
-        HAL_Delay(500);
-         __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, 75);
-        HAL_Delay(500);
-         __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, 50);
-        HAL_Delay(500);
-        __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, 25);
+            
         
+        for (int i = 0; i < 20; i++)
+        {
+            __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, i * 10);
+        HAL_Delay(75);
+            if(i == 20){
+            HAL_Delay(100);
+            }
+
+        }
+
+        for (int i = 20; i > 0; i--)
+        {
+            __HAL_TIM_SET_COMPARE(&timer_handle, TIM_CHANNEL_1, i * 10);
+        HAL_Delay(75);
+            if(i == 20){
+            HAL_Delay(100);
+            }
+
+              
+        }
    
     }
 }
